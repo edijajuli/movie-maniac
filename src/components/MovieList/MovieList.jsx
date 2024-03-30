@@ -18,7 +18,7 @@ const MovieList = ({ type, title, emoji }) => {
 
   useEffect(() => {
     fetchMovies();
-  }, []);
+  }, [type]);
 
   useEffect(() => {
     if (sort.by !== "default") {
@@ -29,7 +29,7 @@ const MovieList = ({ type, title, emoji }) => {
 
   const fetchMovies = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${type}?api_key=183928bab7fc630ed0449e4f66ec21bd`
+      `https://api.themoviedb.org/3/movie/${type}?api_key=959de7df0abe70dd2b95b092cb1bfe06`
     );
     const data = await response.json();
     setMovies(data.results);
