@@ -10,7 +10,7 @@ const FilterGroup = ({ minRating, onRatingClick, ratings }) => {
               : "movie_filter_item"
           }
           key={rate}
-          onClick={() => onRatingClick({ rate })}
+          onClick={() => onRatingClick(rate)}
         >
           {rate}+ Star
         </li>
